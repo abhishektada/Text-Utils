@@ -155,7 +155,7 @@ function App() {
         <Route path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze below" modes={mode} colorMode={colorMode} textMode={textMode} />} /> */}
         {/* </Routes> */}
         {/* <About textMode={textMode} /> */}
-        <TextForm showAlert={showAlert} heading="Enter the text to analyze below" modes={mode} colorMode={colorMode} textMode={textMode} />
+        <TextForm showAlert={showAlert} heading="Enter the hello text to analyze below" modes={mode} colorMode={colorMode} textMode={textMode} />
         </div>
       {/* </Router> */}
     </>
