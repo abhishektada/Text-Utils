@@ -1,10 +1,10 @@
 import "./App.css";
-import About from "./Component/About";
+// import About from "./Component/About";
 import Navbar from "./Component/Navbar";
 import TextForm from "./Component/TextForm";
 import React, { useState } from "react";
 import Alert from "./Component/Alert";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -22,6 +22,7 @@ function App() {
     btnColor: "#0b5ed7",
     btnBorder: "#0b5ed7",
     btnTextColor: "white",
+    textDeco:"none",
   });
 
   const clickBlueBtn = () => {
@@ -31,6 +32,7 @@ function App() {
       btnColor: "rgb(12 177 255)",
       btnBorder: "rgb(12 177 255)",
       btnTextColor: "black",
+      textDeco:"none",
     });
     setTextMode({
       color: "white",
@@ -49,6 +51,7 @@ function App() {
       btnColor: "rgb(59 30 98)",
       btnBorder: "rgb(59 30 98)",
       btnTextColor: "white",
+      textDeco:"none",
     });
     setTextMode({
       color: "black",
@@ -66,6 +69,7 @@ function App() {
       btnColor: "rgb(255 122 220)",
       btnBorder: "rgb(143, 4, 106)",
       btnTextColor: "black",
+      textDeco:"none",
     });
     setTextMode({
       color: "black",
@@ -100,6 +104,7 @@ function App() {
         btnColor: "rgb(255 255 255)",
         btnBorder: "rgb(255 255 255)",
         btnTextColor: "black",
+        textDeco:"none",
       });
 
       setBtnModeText("Enable Light mode");
@@ -119,6 +124,7 @@ function App() {
         btnColor: "#0b5ed7",
         btnBorder: "#0b5ed7",
         btnTextColor: "white",
+        textDeco:"none",
       });
 
       setBtnModeText("Enable Dark mode");
@@ -130,7 +136,7 @@ function App() {
 
   return (
     <>
-      <Router>
+      {/* <Router> */}
         <Navbar
           navbarName="TextUtils"
           modes={mode}
@@ -144,12 +150,14 @@ function App() {
         />
         <Alert alert={alert} />
         <div className="container my-3">
-        <Routes>
-        <Route path="/about" element={<About textMode={textMode} />} />
-        <Route path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze below" modes={mode} colorMode={colorMode} textMode={textMode} />} />
-        </Routes>
+        {/* <Routes> */}
+        {/* <Route path="/about" element={<About textMode={textMode} />} />
+        <Route path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze below" modes={mode} colorMode={colorMode} textMode={textMode} />} /> */}
+        {/* </Routes> */}
+        {/* <About textMode={textMode} /> */}
+        <TextForm showAlert={showAlert} heading="Enter the text to analyze below" modes={mode} colorMode={colorMode} textMode={textMode} />
         </div>
-      </Router>
+      {/* </Router> */}
     </>
   );
 }
