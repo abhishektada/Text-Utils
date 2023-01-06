@@ -60,12 +60,12 @@ export default function Navbar(props) {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
+            <li className="nav-item active">
               <Link className="nav-a active mx-2" aria-current="page" to="/" style={{color:props.colorMode.color,textDecoration:props.colorMode.textDeco}}>
                 {props.homeText}
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item active">
               <Link className="nav-a mx-2" to="/about" style={{color:props.colorMode.color,textDecoration:props.colorMode.textDeco}}>
                 {props.aboutText}
               </Link>
