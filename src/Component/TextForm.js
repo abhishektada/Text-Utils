@@ -176,7 +176,7 @@ export default function TextForm(props) {
             {text.length > 0 ? calWord(text) : 0} words and {text.length}{" "}
             characters
           </p>
-          <p>{0.008 * text.split(" ").length} Minutes to read</p>
+          <p>{text.length>0?0.008 * text.split(" ").length:0} Minutes to read</p>
           <h2>Preview</h2>
           <p>{text.length > 0 ? text : "Enter the text in text area"}</p>
         </div>
